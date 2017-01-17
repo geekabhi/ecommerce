@@ -15,7 +15,7 @@ public class Product {
     private int id ;
     private int version;
     private String name;
-    private String stock_number;
+    private String stock;
     private String description;
     private int rating;
     private int reviews_count;
@@ -51,12 +51,15 @@ public class Product {
     public void setName(String name) {
         this.name = name;
     }
-    public String getStock_number() {
-        return stock_number;
+    public String getStock() {
+        return stock;
     }
-    public void setStock_number(String stock_number) {
-        this.stock_number = stock_number;
+    public void setStock(String stock) {
+        this.stock = stock;
     }
+
+    public Double getActual_price() { return (this.list_price - this.list_price * this.discount);}
+    private void setActual_price(Double actual_price) {}
 
     @CreationTimestamp
     public Date getCreated() {

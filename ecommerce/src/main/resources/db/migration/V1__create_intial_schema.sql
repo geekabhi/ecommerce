@@ -2,7 +2,7 @@ CREATE TABLE `product` (
   `id`            INT           NOT NULL AUTO_INCREMENT,
   `version`       INT           NOT NULL DEFAULT 0,
   `name`          VARCHAR(255)  NOT NULL,
-  `stock_number`  VARCHAR(5)    NOT NULL,
+  `stock`  VARCHAR(5)    NOT NULL,
   `description`   VARCHAR(255)  NULL,
   `rating`        SMALLINT      NULL,
   `reviews_count` INT           NULL,
@@ -15,4 +15,4 @@ CREATE TABLE `product` (
   `modified`      TIMESTAMP     NULL      DEFAULT CURRENT_TIMESTAMP,
   PRIMARY KEY (`id`),
   UNIQUE INDEX `name_UNIQUE` (`name` ASC),
-  UNIQUE INDEX `stock_UNIQUE` (`stock_number` ASC));
+  UNIQUE INDEX `stock_UNIQUE` (`stock` ASC));
