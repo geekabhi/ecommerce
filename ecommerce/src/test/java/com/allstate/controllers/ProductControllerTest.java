@@ -90,5 +90,15 @@ public class ProductControllerTest {
                 .andExpect(jsonPath("$.id",is(2)))
                 .andExpect(jsonPath("$.name",is("Google")));
     }
+    @Test
+    public void shouldFindAllProduct() throws Exception {
+
+        MockHttpServletRequestBuilder request = get("/products/")
+                .contentType(MediaType.APPLICATION_JSON);
+
+        this.mvc.perform(request)
+                .andDo(print())
+                .andExpect(status().isOk());
+    }
 
 }

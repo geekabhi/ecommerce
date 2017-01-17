@@ -1,8 +1,8 @@
 USE ecommerce_test;
 
-TRUNCATE TABLE product;
+TRUNCATE TABLE products;
 
-INSERT INTO `product`
+INSERT INTO `products`
 (`name`,
  `stock`,
  `description`,
